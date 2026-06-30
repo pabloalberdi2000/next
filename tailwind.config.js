@@ -7,15 +7,15 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#3B82F6', // Azul corporativo vibrante
-        secondary: '#F3F4F6', // Gris muy claro
-        text: {
-          primary: '#111827', // Gris oscuro/negro elegante
-          secondary: '#6B7280', // Gris medio
+        'brand-gradient': {
+          start: '#FCD34D',    // amber-400
+          mid1: '#F43F5E',     // rose-500
+          mid2: '#6366F1',     // indigo-500
+          end: '#10B981',      // emerald-500
         },
       },
       fontFamily: {
-        sans: ['var(--font-geist-sans)'],
+        sans: ['Geist', 'Inter', 'system-ui', 'sans-serif'],
         mono: ['var(--font-geist-mono)'],
       },
       animation: {
@@ -31,6 +31,9 @@ module.exports = {
           '0%': { opacity: '0', transform: 'translateY(20px)' },
           '100%': { opacity: '1', transform: 'translateY(0)' },
         },
+      },
+      backgroundImage: {
+        'brand-gradient': 'linear-gradient(90deg, #FCD34D, #F43F5E, #6366F1, #10B981)',
       },
     },
   },

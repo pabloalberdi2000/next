@@ -12,19 +12,23 @@ export default function Navbar() {
   const navLinks = [
     { label: 'Inicio', href: '#home' },
     { label: 'Método', href: '#method' },
-    { label: 'Asignaturas', href: '#asignaturas' },
-    { label: 'Contacto', href: '#contacto' },
+    { label: 'Asignaturas', href: '#subjects' },
+    { label: 'Instalaciones', href: '#facilities' },
+    { label: 'Contacto', href: '#contact' },
   ];
 
   return (
-    <nav className="sticky top-0 z-50 bg-white border-b border-gray-100 shadow-sm">
+    <nav className="sticky top-0 z-50 bg-white border-b border-slate-100 shadow-sm">
       <div className="container flex items-center justify-between h-20">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2 group">
-          <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center text-white font-bold text-lg group-hover:shadow-lg transition-all duration-300">
+        <Link href="/" className="flex items-center gap-3 group">
+          <div className="w-12 h-12 bg-gradient-to-r from-amber-400 via-rose-500 via-indigo-500 to-emerald-500 rounded-xl flex items-center justify-center text-white font-extrabold text-lg shadow-md group-hover:shadow-lg transition-all duration-300">
             N
           </div>
-          <span className="font-bold text-xl text-gray-900 hidden sm:inline">NEXT</span>
+          <div className="hidden sm:block">
+            <span className="font-extrabold text-xl text-slate-950">NEXT</span>
+            <p className="text-xs text-slate-500">Academy</p>
+          </div>
         </Link>
 
         {/* Desktop Navigation */}
@@ -33,7 +37,7 @@ export default function Navbar() {
             <a
               key={link.label}
               href={link.href}
-              className="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-300"
+              className="text-slate-600 hover:text-slate-950 font-medium transition-colors duration-300"
             >
               {link.label}
             </a>
@@ -42,15 +46,18 @@ export default function Navbar() {
 
         {/* CTA Button - Desktop */}
         <div className="hidden md:flex items-center gap-4">
-          <button className="px-6 py-2.5 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold rounded-lg hover:shadow-xl hover:shadow-blue-500/30 hover:scale-105 transition-all duration-300 active:scale-95">
+          <a
+            href="#contact"
+            className="px-6 py-2.5 bg-gradient-to-r from-amber-400 via-rose-500 via-indigo-500 to-emerald-500 text-white font-semibold rounded-xl hover:shadow-xl shadow-lg transition-transform duration-300 hover:scale-[1.02] active:scale-[0.98]"
+          >
             Plataforma Alumnos
-          </button>
+          </a>
         </div>
 
         {/* Mobile Menu Button */}
         <button
           onClick={toggleMenu}
-          className="md:hidden p-2 text-gray-900 hover:bg-gray-100 rounded-lg transition-colors duration-300"
+          className="md:hidden p-2 text-slate-900 hover:bg-slate-100 rounded-lg transition-colors duration-300"
         >
           {isOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
@@ -58,21 +65,29 @@ export default function Navbar() {
 
       {/* Mobile Navigation */}
       {isOpen && (
-        <div className="md:hidden border-t border-gray-100 bg-white animate-slide-down">
+        <div className="md:hidden border-t border-slate-100 bg-white animate-slide-down">
           <div className="container py-4 space-y-4">
             {navLinks.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
-                className="block text-gray-700 hover:text-blue-600 font-medium py-2 transition-colors duration-300"
+                className="block text-slate-700 hover:text-slate-950 font-medium py-2 transition-colors duration-300"
                 onClick={() => setIsOpen(false)}
               >
                 {link.label}
               </a>
             ))}
-            <button className="w-full mt-4 px-4 py-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300">
-              Plataforma Alumnos
-            </button>
+
+            {/* Mobile CTA */}
+            <div className="pt-4 border-t border-slate-100">
+              <a
+                href="#contact"
+                className="w-full block px-4 py-3 bg-gradient-to-r from-amber-400 via-rose-500 via-indigo-500 to-emerald-500 text-white font-semibold rounded-xl text-center hover:shadow-lg transition-all duration-300"
+                onClick={() => setIsOpen(false)}
+              >
+                Plataforma Alumnos
+              </a>
+            </div>
           </div>
         </div>
       )}

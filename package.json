@@ -1,7 +1,7 @@
 {
-  "name": "next-academy",
-  "version": "1.0.0",
-  "description": "Academia NEXT - Apoyo académico para estudiantes de Deusto",
+  "name": "academianext-deusto",
+  "version": "2.0.0",
+  "description": "NEXT Academy - Especialista académico para la Universidad de Deusto con i18n (ES/EU)",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

@@ -31,7 +31,7 @@ export default function MethodSection() {
       <div className="container">
         <div className="text-center mb-16 space-y-4">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
-            El Método <span className="text-blue-600">NEXT</span>
+            El Método <span className="text-black">NEXT</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             Cuatro pilares fundamentales diseñados para tu éxito académico
@@ -44,13 +44,13 @@ export default function MethodSection() {
             return (
               <div
                 key={index}
-                className="group p-8 rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-lg hover:bg-blue-50/50 transition-all duration-300 text-center"
+                className="group p-8 rounded-xl border border-gray-200 hover:border-gray-400 hover:shadow-lg hover:bg-gray-50 transition-all duration-300 text-center"
               >
                 <div className="flex justify-center mb-6">
-                  <div className="p-4 bg-blue-100 rounded-xl group-hover:bg-blue-200 transition-colors duration-300">
+                  <div className="p-4 bg-gray-100 rounded-xl group-hover:bg-gray-200 transition-colors duration-300">
                     <Icon
                       size={32}
-                      className="text-blue-600 group-hover:scale-110 transition-transform duration-300"
+                      className="text-gray-700 group-hover:scale-110 transition-transform duration-300"
                     />
                   </div>
                 </div>

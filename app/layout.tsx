@@ -2,12 +2,12 @@ import type { Metadata } from 'next';
 import './globals.css';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import WhatsAppWidget from '@/components/WhatsAppWidget';
 
 export const metadata: Metadata = {
-  title: 'NEXT Academy | Apoyo Académico en Deusto',
-  description: 'Academia NEXT: método personalizado, plataforma online, clases en vídeo y grupos reducidos para estudiantes de la Universidad de Deusto.',
+  title: 'NEXT Academy - Especialista en la Universidad de Deusto',
+  description: 'Academia NEXT: apoyo académico especializado para estudiantes de la Universidad de Deusto. Tutores expertos, clases online y grupos reducidos.',
   viewport: 'width=device-width, initial-scale=1',
-  keywords: 'academia, Deusto, ADE, Ingeniería, Derecho, clases, apoyo académico',
 };
 
 export default function RootLayout({
@@ -17,12 +17,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es">
-      <body className="bg-white text-gray-900">
+      <head>
+        <link rel="canonical" href="https://academianext.com/" />
+      </head>
+      <body className="bg-white text-slate-900">
         <Navbar />
         <main className="min-h-screen">
           {children}
         </main>
         <Footer />
+        <WhatsAppWidget />
       </body>
     </html>
   );

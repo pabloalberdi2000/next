@@ -44,3 +44,11 @@ textarea {
 .gradient-navbar {
   background: linear-gradient(90deg, #FBBF24 0%, #FBBF24 25%, #EF4444 35%, #3B82F6 65%, #10B981 100%);
 }
+
+/* Media query para background attachment */
+@media (max-width: 768px) {
+  [style*="backgroundAttachment: 'fixed'"],
+  [style*="background-attachment: fixed"] {
+    background-attachment: scroll !important;
+  }
+}

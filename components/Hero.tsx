@@ -63,7 +63,7 @@ export default function Hero() {
           </div>
 
           {/* Main Headline con gradiente en palabra clave */}
-          <h1 className="text-5xl md:text-7xl font-extrabold text-white leading-tight tracking-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight tracking-tight">
             Especialistas en la Universidad de{' '}
             <span
               style={{

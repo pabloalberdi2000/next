@@ -5,7 +5,7 @@ import Footer from '@/components/Footer';
 import WhatsAppWidget from '@/components/WhatsAppWidget';
 
 export const metadata: Metadata = {
-  title: 'NEXT Academy - Especialista en la Universidad de Deusto',
+  title: 'Academia NEXT - Especialista en la Universidad de Deusto',
   description: 'Academia NEXT: apoyo académico especializado para estudiantes de la Universidad de Deusto. Tutores expertos, clases online y grupos reducidos.',
   viewport: 'width=device-width, initial-scale=1',
 };

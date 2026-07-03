@@ -204,7 +204,7 @@ export default function AsignaturasSelector() {
             <div key={index} className="relative">
               <button
                 onClick={() => setSelectedCurso(index)}
-                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                className={`px-3 sm:px-6 py-2 sm:py-3 rounded-lg font-semibold transition-all duration-300 text-sm sm:text-base ${
                   selectedCurso === index
                     ? 'bg-gradient-to-r gradient-custom text-white'
                     : 'text-slate-600 bg-white hover:bg-gradient-to-r hover:gradient-custom hover:text-white'
@@ -226,7 +226,7 @@ export default function AsignaturasSelector() {
           {asignaturasActuales.map((asignatura) => (
             <div
               key={asignatura.id}
-              className="group p-6 bg-white border border-slate-100 rounded-xl hover:shadow-lg hover:border-slate-200 transition-all duration-300 hover:-translate-y-1"
+              className="group p-4 sm:p-6 bg-white border border-slate-100 rounded-xl hover:shadow-lg hover:border-slate-200 transition-all duration-300 hover:-translate-y-1"
             >
               <div className="space-y-3">
                 <h4 className="text-lg font-bold text-slate-950 group-hover:text-slate-950 transition-colors duration-300 line-clamp-2">

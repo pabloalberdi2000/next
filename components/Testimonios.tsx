@@ -7,7 +7,7 @@ const testimonios = [
     nombre: 'Carlos M.',
     grado: 'Estudiante de ADE',
     texto:
-      'NEXT Academy me ha ayudado a mejorar mis notas en un 2.5 puntos. Los tutores son excepcionales y la plataforma es muy intuitiva.',
+      'Academia NEXT me ha ayudado a mejorar mis notas en un 2.5 puntos. Los tutores son excepcionales y la plataforma es muy intuitiva.',
   },
   {
     nombre: 'Elena L.',
@@ -40,7 +40,7 @@ export default function Testimonios() {
           {testimonios.map((testimonial, idx) => (
             <div
               key={idx}
-              className="p-8 border border-slate-100 rounded-xl hover:shadow-lg transition-all duration-300 bg-slate-50"
+              className="p-4 sm:p-8 border border-slate-100 rounded-xl hover:shadow-lg transition-all duration-300 bg-slate-50"
             >
               <div className="flex gap-1 mb-4">
                 {[...Array(5)].map((_, i) => (

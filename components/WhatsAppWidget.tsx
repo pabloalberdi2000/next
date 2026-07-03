@@ -3,8 +3,8 @@
 import { MessageCircle } from 'lucide-react';
 
 export default function WhatsAppWidget() {
-  const whatsappNumber = '34943123456'; // Número sin + ni espacios
-  const whatsappMessage = encodeURIComponent('Hola, me gustaría recibir más información sobre los servicios de NEXT Academy.');
+  const whatsappNumber = '34661650267'; // Número sin + ni espacios
+  const whatsappMessage = encodeURIComponent('Hola, me gustaría recibir más información sobre los servicios de Academia NEXT.');
   const whatsappURL = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 
   return (

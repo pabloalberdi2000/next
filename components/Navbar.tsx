@@ -29,7 +29,7 @@ export default function Navbar() {
         <Link href="/" className="flex items-center gap-3 group">
           <Image
             src="/logoSinFondo.png"
-            alt="NEXT Academy"
+            alt="Academia NEXT"
             width={48}
             height={48}
             className="h-12 w-auto"

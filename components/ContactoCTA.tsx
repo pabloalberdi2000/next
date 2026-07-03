@@ -40,7 +40,7 @@ export default function ContactoCTA() {
       {/* Overlay blanco semi-transparente */}
       <div className="absolute inset-0 bg-white/85 -z-10"></div>
       <div className="container">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12">
           {/* Contact Info */}
           <div className="space-y-8">
             <div>
@@ -63,10 +63,10 @@ export default function ContactoCTA() {
             <div className="space-y-6">
               <a
                 href="tel:+34943123456"
-                className="flex items-start gap-4 p-4 rounded-xl hover:bg-white transition-colors duration-300"
+                className="flex items-start gap-3 sm:gap-4 p-3 sm:p-4 rounded-xl hover:bg-white transition-colors duration-300"
               >
-                <div className="p-3 bg-gradient-to-r gradient-custom text-white rounded-xl flex-shrink-0">
-                  <Phone size={24} />
+                <div className="p-2 sm:p-3 bg-gradient-to-r gradient-custom text-white rounded-xl flex-shrink-0">
+                  <Phone className="w-5 h-5 sm:w-6 sm:h-6" />
                 </div>
                 <div>
                   <p className="font-semibold text-slate-950">Llamanos</p>
@@ -76,10 +76,10 @@ export default function ContactoCTA() {
 
               <a
                 href="mailto:info@academianext.com"
-                className="flex items-start gap-4 p-4 rounded-xl hover:bg-white transition-colors duration-300"
+                className="flex items-start gap-3 sm:gap-4 p-3 sm:p-4 rounded-xl hover:bg-white transition-colors duration-300"
               >
-                <div className="p-3 bg-gradient-to-r gradient-custom text-white rounded-xl flex-shrink-0">
-                  <Mail size={24} />
+                <div className="p-2 sm:p-3 bg-gradient-to-r gradient-custom text-white rounded-xl flex-shrink-0">
+                  <Mail className="w-5 h-5 sm:w-6 sm:h-6" />
                 </div>
                 <div>
                   <p className="font-semibold text-slate-950">Email</p>
@@ -87,9 +87,9 @@ export default function ContactoCTA() {
                 </div>
               </a>
 
-              <div className="flex items-start gap-4 p-4 rounded-xl hover:bg-white transition-colors duration-300">
-                <div className="p-3 bg-gradient-to-r gradient-custom text-white rounded-xl flex-shrink-0">
-                  <MapPin size={24} />
+              <div className="flex items-start gap-3 sm:gap-4 p-3 sm:p-4 rounded-xl hover:bg-white transition-colors duration-300">
+                <div className="p-2 sm:p-3 bg-gradient-to-r gradient-custom text-white rounded-xl flex-shrink-0">
+                  <MapPin className="w-5 h-5 sm:w-6 sm:h-6" />
                 </div>
                 <div>
                   <p className="font-semibold text-slate-950">Ubicación</p>
@@ -101,7 +101,7 @@ export default function ContactoCTA() {
           </div>
 
           {/* Contact Form */}
-          <div className="bg-white p-8 rounded-2xl shadow-lg">
+          <div className="bg-white p-4 sm:p-8 rounded-2xl shadow-lg">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label className="block text-sm font-semibold text-slate-950 mb-2">

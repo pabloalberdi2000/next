@@ -10,13 +10,13 @@ export default function Footer() {
   return (
     <footer className="bg-slate-950 text-white">
       <div className="container py-16">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12 mb-12">
           {/* Brand */}
           <div className="space-y-4">
             <Link href="/" className="flex items-center gap-3">
               <Image
                 src="/logoSinFondo.png"
-                alt="NEXT Academy"
+                alt="Academia NEXT"
                 width={48}
                 height={48}
                 className="h-12 w-auto"
@@ -116,7 +116,7 @@ export default function Footer() {
 
         {/* Bottom */}
         <div className="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-slate-400 text-sm">
-          <p>© {currentYear} NEXT Academy. Todos los derechos reservados.</p>
+          <p>© {currentYear} Academia NEXT. Todos los derechos reservados.</p>
           <div className="flex gap-6">
             <a href="#" className="hover:text-white transition-colors duration-300">
               Política de Privacidad

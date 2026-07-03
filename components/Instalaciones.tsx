@@ -6,7 +6,7 @@ export default function Instalaciones() {
   return (
     <section id="facilities" className="py-20 bg-slate-50">
       <div className="container">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 items-center">
           <div className="space-y-6">
             <h2 className="text-4xl md:text-5xl font-extrabold text-slate-950 tracking-tight">
               Nuestras Instalaciones
@@ -39,7 +39,7 @@ export default function Instalaciones() {
           <div className="rounded-2xl overflow-hidden h-96">
             <Image
               src="/ubicacionNext.jpg"
-              alt="Ubicación NEXT Academy"
+              alt="Ubicación Academia NEXT"
               width={500}
               height={400}
               className="w-full h-full object-cover"

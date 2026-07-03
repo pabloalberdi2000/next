@@ -1,8 +1,8 @@
 import ContactoCTA from '@/components/ContactoCTA';
 
 export const metadata = {
-  title: 'Contactanos - NEXT Academy',
-  description: 'Ponte en contacto con NEXT Academy para solicitar información sobre nuestros servicios.',
+  title: 'Contactanos - Academia NEXT',
+  description: 'Ponte en contacto con Academia NEXT para solicitar información sobre nuestros servicios.',
 };
 
 export default function ContactanosPage() {

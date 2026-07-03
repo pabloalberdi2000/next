@@ -46,7 +46,9 @@ export default function Navbar() {
         {/* CTA Button - Desktop */}
         <div className="hidden md:flex items-center gap-4">
           <a
-            href="/#contact"
+            href="https://academianext.com/plataforma/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="px-6 py-2.5 bg-gradient-to-r gradient-custom text-white font-semibold rounded-xl hover:shadow-xl shadow-lg transition-transform duration-300 hover:scale-[1.02] active:scale-[0.98]"
           >
             Plataforma Alumnos
@@ -80,7 +82,9 @@ export default function Navbar() {
             {/* Mobile CTA */}
             <div className="pt-4 border-t border-slate-100">
               <a
-                href="/#contact"
+                href="https://academianext.com/plataforma/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-full block px-4 py-3 bg-gradient-to-r gradient-custom text-white font-semibold rounded-xl text-center hover:shadow-lg transition-all duration-300"
                 onClick={() => setIsOpen(false)}
               >

@@ -18,7 +18,7 @@ export default function AsignaturasSection() {
       {/* Overlay blanco semi-transparente */}
       <div className="absolute inset-0 bg-white/85 -z-10"></div>
       <div className="container">
-        <div className="text-center mb-16 space-y-4">
+        <div className="text-center mb-16 space-y-4 bg-white/95 rounded-2xl p-8">
           <h2 className="text-4xl md:text-5xl font-extrabold text-slate-950 tracking-tight">
             Nuestras <span
               style={{

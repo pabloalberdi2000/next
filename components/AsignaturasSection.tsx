@@ -22,10 +22,7 @@ export default function AsignaturasSection() {
           <h2 className="text-4xl md:text-5xl font-extrabold text-slate-950 tracking-tight">
             Nuestras <span
               style={{
-                background: 'linear-gradient(90deg, #FBBF24 0%, #FBBF24 25%, #EF4444 35%, #3B82F6 65%, #10B981 100%)',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                backgroundClip: 'text',
+                color: '#3B82F6',
               }}
             >Asignaturas</span>
           </h2>

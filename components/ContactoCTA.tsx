@@ -48,10 +48,7 @@ export default function ContactoCTA() {
                 Solicita Información{' '}
                 <span
                   style={{
-                    background: 'linear-gradient(90deg, #FBBF24 0%, #FBBF24 25%, #EF4444 35%, #3B82F6 65%, #10B981 100%)',
-                    WebkitBackgroundClip: 'text',
-                    WebkitTextFillColor: 'transparent',
-                    backgroundClip: 'text',
+                    color: '#3B82F6',
                   }}
                 >
                   Gratuita
@@ -167,15 +164,15 @@ export default function ContactoCTA() {
 
               <button
                 type="submit"
-                className="w-full px-6 py-3 bg-black text-white font-semibold rounded-xl transition-all duration-300 active:scale-[0.98] flex items-center justify-center gap-2"
-                style={{ background: '#000000' }}
+                className="w-full px-6 py-3 bg-blue-600 text-white font-semibold rounded-xl transition-all duration-300 active:scale-[0.98] flex items-center justify-center gap-2"
+                style={{ background: '#3B82F6' }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.background = 'linear-gradient(90deg, #FBBF24 0%, #FBBF24 25%, #EF4444 35%, #3B82F6 65%, #10B981 100%)';
-                  e.currentTarget.style.boxShadow = '0 10px 25px rgba(0, 0, 0, 0.2)';
+                  e.currentTarget.style.background = '#1d4ed8';
+                  e.currentTarget.style.boxShadow = '0 10px 25px rgba(59, 130, 246, 0.3)';
                   e.currentTarget.style.transform = 'scale(1.02)';
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.background = '#000000';
+                  e.currentTarget.style.background = '#3B82F6';
                   e.currentTarget.style.boxShadow = 'none';
                   e.currentTarget.style.transform = 'scale(1)';
                 }}

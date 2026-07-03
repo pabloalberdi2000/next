@@ -67,10 +67,7 @@ export default function Hero() {
             Especialistas en la Universidad de{' '}
             <span
               style={{
-                background: 'linear-gradient(90deg, #FBBF24 0%, #FBBF24 25%, #EF4444 35%, #3B82F6 65%, #10B981 100%)',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                backgroundClip: 'text',
+                color: '#3B82F6',
               }}
             >
               Deusto

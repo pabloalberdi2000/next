@@ -246,7 +246,7 @@ export default function AsignaturasSelector() {
                   color: '#0f172a',
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.background = 'linear-gradient(90deg, #FBBF24 0%, #FBBF24 25%, #EF4444 35%, #3B82F6 65%, #10B981 100%)';
+                  e.currentTarget.style.background = '#3B82F6';
                   e.currentTarget.style.color = 'white';
                   e.currentTarget.style.borderColor = 'transparent';
                 }}

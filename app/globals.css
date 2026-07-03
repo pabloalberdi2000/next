@@ -37,5 +37,10 @@ textarea {
 
 /* Custom gradient: Amarillo-Rojo-Morado-Azul-Verde */
 .gradient-custom {
+  background: #3B82F6; /* Azul */
+}
+
+/* Gradient original (solo para navbar) */
+.gradient-navbar {
   background: linear-gradient(90deg, #FBBF24 0%, #FBBF24 25%, #EF4444 35%, #3B82F6 65%, #10B981 100%);
 }

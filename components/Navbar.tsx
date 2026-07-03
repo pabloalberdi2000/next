@@ -3,10 +3,12 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 import { Menu, X } from 'lucide-react';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
@@ -15,6 +17,10 @@ export default function Navbar() {
     { label: 'Asignaturas', href: '/asignaturas' },
     { label: 'Contactanos', href: '/contactanos' },
   ];
+
+  const isActive = (href: string) => {
+    return pathname === href;
+  };
 
   return (
     <nav className="sticky top-0 z-50 bg-white border-b border-slate-100 shadow-sm">
@@ -36,7 +42,11 @@ export default function Navbar() {
             <Link
               key={link.label}
               href={link.href}
-              className="text-slate-600 hover:text-slate-950 font-medium transition-colors duration-300"
+              className={`font-medium transition-colors duration-300 ${
+                isActive(link.href)
+                  ? 'text-blue-600 border-b-2 border-blue-600 pb-1'
+                  : 'text-slate-600 hover:text-slate-950'
+              }`}
             >
               {link.label}
             </Link>
@@ -49,7 +59,7 @@ export default function Navbar() {
             href="https://academianext.com/plataforma/"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-6 py-2.5 bg-gradient-to-r gradient-custom text-white font-semibold rounded-xl hover:shadow-xl shadow-lg transition-transform duration-300 hover:scale-[1.02] active:scale-[0.98]"
+            className="px-6 py-2.5 bg-gradient-to-r gradient-navbar text-white font-semibold rounded-xl hover:shadow-xl shadow-lg transition-transform duration-300 hover:scale-[1.02] active:scale-[0.98]"
           >
             Plataforma Alumnos
           </a>
@@ -72,7 +82,11 @@ export default function Navbar() {
               <Link
                 key={link.label}
                 href={link.href}
-                className="block text-slate-700 hover:text-slate-950 font-medium py-2 transition-colors duration-300"
+                className={`block font-medium py-2 transition-colors duration-300 ${
+                  isActive(link.href)
+                    ? 'text-blue-600 border-l-4 border-blue-600 pl-2'
+                    : 'text-slate-700 hover:text-slate-950'
+                }`}
                 onClick={() => setIsOpen(false)}
               >
                 {link.label}
@@ -85,7 +99,7 @@ export default function Navbar() {
                 href="https://academianext.com/plataforma/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full block px-4 py-3 bg-gradient-to-r gradient-custom text-white font-semibold rounded-xl text-center hover:shadow-lg transition-all duration-300"
+                className="w-full block px-4 py-3 bg-gradient-to-r gradient-navbar text-white font-semibold rounded-xl text-center hover:shadow-lg transition-all duration-300"
                 onClick={() => setIsOpen(false)}
               >
                 Plataforma Alumnos

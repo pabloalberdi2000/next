@@ -53,7 +53,7 @@ export default function Testimonios() {
               </div>
 
               <p className="text-slate-700 mb-6 leading-relaxed">
-                "{testimonial.texto}"
+                &quot;{testimonial.texto}&quot;
               </p>
 
               <div>

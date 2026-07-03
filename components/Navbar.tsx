@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Menu, X } from 'lucide-react';
 
 export default function Navbar() {
@@ -10,11 +11,9 @@ export default function Navbar() {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   const navLinks = [
-    { label: 'Inicio', href: '#home' },
-    { label: 'Método', href: '#method' },
-    { label: 'Asignaturas', href: '#subjects' },
-    { label: 'Instalaciones', href: '#facilities' },
-    { label: 'Contacto', href: '#contact' },
+    { label: 'Inicio', href: '/' },
+    { label: 'Asignaturas', href: '/asignaturas' },
+    { label: 'Contactanos', href: '/contactanos' },
   ];
 
   return (
@@ -22,33 +21,33 @@ export default function Navbar() {
       <div className="container flex items-center justify-between h-20">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3 group">
-          <div className="w-12 h-12 bg-gradient-to-r from-amber-400 via-rose-500 via-indigo-500 to-emerald-500 rounded-xl flex items-center justify-center text-white font-extrabold text-lg shadow-md group-hover:shadow-lg transition-all duration-300">
-            N
-          </div>
-          <div className="hidden sm:block">
-            <span className="font-extrabold text-xl text-slate-950">NEXT</span>
-            <p className="text-xs text-slate-500">Academy</p>
-          </div>
+          <Image
+            src="/logoSinFondo.png"
+            alt="NEXT Academy"
+            width={48}
+            height={48}
+            className="h-12 w-auto"
+          />
         </Link>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.label}
               href={link.href}
               className="text-slate-600 hover:text-slate-950 font-medium transition-colors duration-300"
             >
               {link.label}
-            </a>
+            </Link>
           ))}
         </div>
 
         {/* CTA Button - Desktop */}
         <div className="hidden md:flex items-center gap-4">
           <a
-            href="#contact"
-            className="px-6 py-2.5 bg-gradient-to-r from-amber-400 via-rose-500 via-indigo-500 to-emerald-500 text-white font-semibold rounded-xl hover:shadow-xl shadow-lg transition-transform duration-300 hover:scale-[1.02] active:scale-[0.98]"
+            href="/#contact"
+            className="px-6 py-2.5 bg-gradient-to-r gradient-custom text-white font-semibold rounded-xl hover:shadow-xl shadow-lg transition-transform duration-300 hover:scale-[1.02] active:scale-[0.98]"
           >
             Plataforma Alumnos
           </a>
@@ -68,21 +67,21 @@ export default function Navbar() {
         <div className="md:hidden border-t border-slate-100 bg-white animate-slide-down">
           <div className="container py-4 space-y-4">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.label}
                 href={link.href}
                 className="block text-slate-700 hover:text-slate-950 font-medium py-2 transition-colors duration-300"
                 onClick={() => setIsOpen(false)}
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
 
             {/* Mobile CTA */}
             <div className="pt-4 border-t border-slate-100">
               <a
-                href="#contact"
-                className="w-full block px-4 py-3 bg-gradient-to-r from-amber-400 via-rose-500 via-indigo-500 to-emerald-500 text-white font-semibold rounded-xl text-center hover:shadow-lg transition-all duration-300"
+                href="/#contact"
+                className="w-full block px-4 py-3 bg-gradient-to-r gradient-custom text-white font-semibold rounded-xl text-center hover:shadow-lg transition-all duration-300"
                 onClick={() => setIsOpen(false)}
               >
                 Plataforma Alumnos

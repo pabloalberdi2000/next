@@ -34,3 +34,8 @@ select,
 textarea {
   @apply transition-all duration-300;
 }
+
+/* Custom gradient: Amarillo-Rojo-Morado-Azul-Verde */
+.gradient-custom {
+  background: linear-gradient(90deg, #FBBF24 0%, #FBBF24 25%, #EF4444 35%, #3B82F6 65%, #10B981 100%);
+}

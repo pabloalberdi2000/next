@@ -8,8 +8,7 @@ export default function ContactoCTA() {
     nombre: '',
     email: '',
     telefono: '',
-    grado: '',
-    mensaje: '',
+    motivo: '',
   });
 
   const [submitted, setSubmitted] = useState(false);
@@ -27,14 +26,36 @@ export default function ContactoCTA() {
   };
 
   return (
-    <section id="contact" className="py-20 bg-slate-50">
+    <section
+      id="contact"
+      className="py-20 relative"
+      style={{
+        backgroundImage: 'url(/logogrande.png)',
+        backgroundSize: 'contain',
+        backgroundPosition: 'center center',
+        backgroundRepeat: 'no-repeat',
+        backgroundAttachment: 'fixed',
+      }}
+    >
+      {/* Overlay blanco semi-transparente */}
+      <div className="absolute inset-0 bg-white/85 -z-10"></div>
       <div className="container">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Info */}
           <div className="space-y-8">
             <div>
               <h2 className="text-4xl md:text-5xl font-extrabold text-slate-950 tracking-tight mb-4">
-                Solicita Información Gratuita
+                Solicita Información{' '}
+                <span
+                  style={{
+                    background: 'linear-gradient(90deg, #FBBF24 0%, #FBBF24 25%, #EF4444 35%, #3B82F6 65%, #10B981 100%)',
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                    backgroundClip: 'text',
+                  }}
+                >
+                  Gratuita
+                </span>
               </h2>
               <p className="text-xl text-slate-600">
                 Nuestro equipo te ayudará a elegir el mejor plan de apoyo
@@ -47,7 +68,7 @@ export default function ContactoCTA() {
                 href="tel:+34943123456"
                 className="flex items-start gap-4 p-4 rounded-xl hover:bg-white transition-colors duration-300"
               >
-                <div className="p-3 bg-gradient-to-r from-amber-400 via-rose-500 via-indigo-500 to-emerald-500 text-white rounded-xl flex-shrink-0">
+                <div className="p-3 bg-gradient-to-r gradient-custom text-white rounded-xl flex-shrink-0">
                   <Phone size={24} />
                 </div>
                 <div>
@@ -60,7 +81,7 @@ export default function ContactoCTA() {
                 href="mailto:info@academianext.com"
                 className="flex items-start gap-4 p-4 rounded-xl hover:bg-white transition-colors duration-300"
               >
-                <div className="p-3 bg-gradient-to-r from-amber-400 via-rose-500 via-indigo-500 to-emerald-500 text-white rounded-xl flex-shrink-0">
+                <div className="p-3 bg-gradient-to-r gradient-custom text-white rounded-xl flex-shrink-0">
                   <Mail size={24} />
                 </div>
                 <div>
@@ -70,7 +91,7 @@ export default function ContactoCTA() {
               </a>
 
               <div className="flex items-start gap-4 p-4 rounded-xl hover:bg-white transition-colors duration-300">
-                <div className="p-3 bg-gradient-to-r from-amber-400 via-rose-500 via-indigo-500 to-emerald-500 text-white rounded-xl flex-shrink-0">
+                <div className="p-3 bg-gradient-to-r gradient-custom text-white rounded-xl flex-shrink-0">
                   <MapPin size={24} />
                 </div>
                 <div>
@@ -131,38 +152,33 @@ export default function ContactoCTA() {
 
               <div>
                 <label className="block text-sm font-semibold text-slate-950 mb-2">
-                  Interesado en
-                </label>
-                <select
-                  name="grado"
-                  value={formData.grado}
-                  onChange={handleChange}
-                  className="w-full px-4 py-3 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all duration-300"
-                >
-                  <option value="">- Selecciona grado -</option>
-                  <option value="ade">ADE</option>
-                  <option value="derecho">Derecho</option>
-                  <option value="ingenieria">Ingeniería Informática</option>
-                </select>
-              </div>
-
-              <div>
-                <label className="block text-sm font-semibold text-slate-950 mb-2">
-                  Mensaje
+                  Motivo de la consulta
                 </label>
                 <textarea
-                  name="mensaje"
-                  value={formData.mensaje}
+                  name="motivo"
+                  value={formData.motivo}
                   onChange={handleChange}
                   rows={4}
                   className="w-full px-4 py-3 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all duration-300 resize-none"
-                  placeholder="Cuéntanos qué necesitas..."
+                  placeholder="Cuéntanos el motivo de tu consulta..."
+                  required
                 />
               </div>
 
               <button
                 type="submit"
-                className="w-full px-6 py-3 bg-gradient-to-r from-amber-400 via-rose-500 via-indigo-500 to-emerald-500 text-white font-semibold rounded-xl hover:shadow-xl transition-transform duration-300 hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2"
+                className="w-full px-6 py-3 bg-black text-white font-semibold rounded-xl transition-all duration-300 active:scale-[0.98] flex items-center justify-center gap-2"
+                style={{ background: '#000000' }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.background = 'linear-gradient(90deg, #FBBF24 0%, #FBBF24 25%, #EF4444 35%, #3B82F6 65%, #10B981 100%)';
+                  e.currentTarget.style.boxShadow = '0 10px 25px rgba(0, 0, 0, 0.2)';
+                  e.currentTarget.style.transform = 'scale(1.02)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.background = '#000000';
+                  e.currentTarget.style.boxShadow = 'none';
+                  e.currentTarget.style.transform = 'scale(1)';
+                }}
               >
                 <Send size={20} />
                 Enviar Solicitud

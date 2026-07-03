@@ -32,7 +32,14 @@ export default function Metodo() {
         <div className="text-center mb-16 space-y-4">
           <h2 className="text-4xl md:text-5xl font-extrabold text-slate-950 tracking-tight">
             El Método{' '}
-            <span className="bg-gradient-to-r from-amber-400 via-rose-500 via-indigo-500 to-emerald-500 bg-clip-text text-transparent">
+            <span
+              style={{
+                background: 'linear-gradient(90deg, #FBBF24 0%, #FBBF24 25%, #EF4444 35%, #3B82F6 65%, #10B981 100%)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+              }}
+            >
               NEXT
             </span>
           </h2>

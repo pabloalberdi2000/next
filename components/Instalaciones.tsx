@@ -1,5 +1,7 @@
 'use client';
 
+import Image from 'next/image';
+
 export default function Instalaciones() {
   return (
     <section id="facilities" className="py-20 bg-slate-50">
@@ -25,7 +27,7 @@ export default function Instalaciones() {
                 'Zona de descanso y cafetería',
               ].map((feature, idx) => (
                 <div key={idx} className="flex items-start gap-3">
-                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-gradient-to-r from-amber-400 via-rose-500 via-indigo-500 to-emerald-500 text-white flex items-center justify-center text-sm font-bold">
+                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-gradient-to-r gradient-custom text-white flex items-center justify-center text-sm font-bold">
                     ✓
                   </div>
                   <span className="text-slate-700">{feature}</span>
@@ -34,12 +36,14 @@ export default function Instalaciones() {
             </div>
           </div>
 
-          <div className="bg-gradient-to-br from-slate-200 to-slate-300 rounded-2xl h-96 flex items-center justify-center">
-            <div className="text-center">
-              <div className="text-6xl mb-4">🏢</div>
-              <p className="text-slate-600 text-sm">Galería de instalaciones</p>
-              <p className="text-slate-500 text-xs mt-2">(Imágenes próximamente)</p>
-            </div>
+          <div className="rounded-2xl overflow-hidden h-96">
+            <Image
+              src="/ubicacionNext.jpg"
+              alt="Ubicación NEXT Academy"
+              width={500}
+              height={400}
+              className="w-full h-full object-cover"
+            />
           </div>
         </div>
       </div>

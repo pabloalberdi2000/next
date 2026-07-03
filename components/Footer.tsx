@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { Mail, MapPin, Phone, Linkedin, Instagram, Twitter } from 'lucide-react';
 
 export default function Footer() {
@@ -12,14 +13,14 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           {/* Brand */}
           <div className="space-y-4">
-            <Link href="/" className="flex items-center gap-2">
-              <div className="w-10 h-10 bg-gradient-to-r from-amber-400 via-rose-500 via-indigo-500 to-emerald-500 rounded-lg flex items-center justify-center font-bold text-lg text-white">
-                N
-              </div>
-              <div>
-                <span className="text-2xl font-bold">NEXT</span>
-                <p className="text-xs text-slate-400">Academy</p>
-              </div>
+            <Link href="/" className="flex items-center gap-3">
+              <Image
+                src="/logoSinFondo.png"
+                alt="NEXT Academy"
+                width={48}
+                height={48}
+                className="h-12 w-auto"
+              />
             </Link>
             <p className="text-slate-400 leading-relaxed text-sm">
               Transformando la educación universitaria en Deusto con método, pasión y resultados.

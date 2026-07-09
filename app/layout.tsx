@@ -3,6 +3,7 @@ import './globals.css';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import WhatsAppWidget from '@/components/WhatsAppWidget';
+import EasterEggModal from '@/components/EasterEggModal';
 
 export const metadata: Metadata = {
   title: 'Academia NEXT - Especialista en la Universidad de Deusto',
@@ -27,6 +28,7 @@ export default function RootLayout({
         </main>
         <Footer />
         <WhatsAppWidget />
+        <EasterEggModal />
       </body>
     </html>
   );
